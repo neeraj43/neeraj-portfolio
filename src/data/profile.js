@@ -22,11 +22,10 @@ export const profile = {
   timezone: 'IST (UTC+5:30) · overlaps EU fully, US mornings',
   email: 'neerajwadhwani43@gmail.com',
 
-  // TODO: linkedin + leetcode still need real URLs.
   links: {
     github: 'https://github.com/neeraj43',
-    linkedin: '#',
-    leetcode: '#',
+    linkedin: 'https://www.linkedin.com/in/neeraj-wadhwani-a55085115/',
+    leetcode: 'https://leetcode.com/u/Neeraj43/',
     resume: '/Neeraj-Wadhwani-Resume.pdf', // TODO: drop the PDF into /public
     calendar: '', // optional — a Cal.com / Calendly link converts far better than email
   },

@@ -27,14 +27,14 @@ you should never need to touch a component to change what it says.
 ## Before deploying — checklist
 
 - [x] `profile.links.github` — https://github.com/neeraj43
-- [ ] `profile.links` linkedin + leetcode still ship as `'#'`
+- [x] `profile.links` linkedin + leetcode filled in
 - [x] `../prompt-eval` pushed — github.com/neeraj43/prompt-eval
 - [ ] `public/Neeraj-Wadhwani-Resume.pdf` added
 - [x] Headshot added — `public/neeraj-480.jpg` / `neeraj-960.jpg` (falls back to "NW" initials if missing)
 - [ ] Replace the scaffold entries in `src/data/projects.js` with real work
 - [ ] Fill `metric` in `src/data/experience.js`, or leave blank (blank does not render)
 - [ ] Update the canonical + `og:` URLs in `index.html` if the domain differs
-- [ ] Add profile URLs to the `sameAs` array in the JSON-LD block in `index.html`
+- [x] Profile URLs added to the `sameAs` array in the JSON-LD block in `index.html`
 - [ ] Regenerate `public/og.png` if the headline changes (see *Images* below)
 
 ## Images
