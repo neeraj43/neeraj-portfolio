@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Neeraj Wadhwani — AI Engineer &amp; Lead</title>
+    <meta
+      name="description"
+      content="AI engineer and lead with 9 years building production software. I build agentic AI systems — evaluation harnesses, guardrails and LLM tooling — inside a regulated bank at JPMorgan Chase."
+    />
+    <meta name="author" content="Neeraj Wadhwani" />
+    <link rel="canonical" href="https://neerajwadhwani.com/" />
+    <meta name="theme-color" content="#0a0c11" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#fafaf9" media="(prefers-color-scheme: light)" />
+
+    <!-- Open Graph — controls how the link renders in LinkedIn / Slack / WhatsApp -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://neerajwadhwani.com/" />
+    <meta property="og:title" content="Neeraj Wadhwani — AI Engineer &amp; Lead" />
+    <meta
+      property="og:description"
+      content="9 years building production software. Now building agentic AI systems inside a regulated bank at JPMorgan Chase."
+    />
+    <meta property="og:image" content="https://neerajwadhwani.com/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Neeraj Wadhwani" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Neeraj Wadhwani — AI Engineer &amp; Lead" />
+    <meta
+      name="twitter:description"
+      content="9 years building production software. Now building agentic AI systems inside a regulated bank at JPMorgan Chase."
+    />
+    <meta name="twitter:image" content="https://neerajwadhwani.com/og.png" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/neeraj-480.jpg" />
+
+    <!-- The headshot is the largest thing above the fold; start it early -->
+    <link
+      rel="preload"
+      as="image"
+      href="/neeraj-960.jpg"
+      imagesrcset="/neeraj-480.jpg 480w, /neeraj-960.jpg 960w"
+      imagesizes="(min-width: 1024px) 352px, 192px"
+      fetchpriority="high"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tell Google who this page is about, so it can build a knowledge panel -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Neeraj Wadhwani",
+        "url": "https://neerajwadhwani.com/",
+        "jobTitle": "AI Engineer & Lead",
+        "worksFor": { "@type": "Organization", "name": "JPMorgan Chase & Co." },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Indore",
+          "addressRegion": "Madhya Pradesh",
+          "addressCountry": "IN"
+        },
+        "knowsAbout": [
+          "Agentic AI Systems",
+          "Large Language Models",
+          "Retrieval-Augmented Generation",
+          "LLM Evaluation",
+          "Python",
+          "Machine Learning",
+          "React",
+          "Angular",
+          "Distributed Systems"
+        ],
+        "sameAs": []
+      }
+    </script>
+
+    <!-- Apply the stored theme before first paint so there is no flash -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme');
+          var dark = stored
+            ? stored === 'dark'
+            : window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (dark) document.documentElement.classList.add('dark');
+        } catch (e) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

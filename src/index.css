@@ -1,0 +1,200 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   Design tokens — derived from the headshot in /public.
+   The blazer gives the deep navy (accent), the window light on the
+   right gives the warm sand (--warm), and the office wall gives the
+   slightly warm neutral greys. Every text colour below was checked
+   against its own surface for WCAG AA (4.5:1). Do not introduce raw
+   slate-* values.
+   ============================================================ */
+
+:root {
+  /* Light — default */
+  --bg: 250 250 249;
+  --elev: 255 255 255;
+  --subtle: 244 244 242;
+  --line: 227 226 221;
+  --line-soft: 237 236 232;
+  --ink: 14 18 25;      /* 18.0:1 */
+  --muted: 69 78 96;    /*  8.0:1 */
+  --faint: 102 110 126; /*  4.9:1 */
+  --accent: 30 62 123;    /* blazer navy      9.9:1 */
+  --accent-hi: 22 48 95;  /* hover           12.4:1 */
+  --warm: 138 90 43;      /* window light     5.6:1 */
+  --ok: 4 120 87;         /* available/current 5.3:1 */
+  --bad: 176 32 32;       /* failed check     6.5:1 */
+  --glow: 30 62 123;
+  --glow-warm: 186 138 84;
+  --glow-a: 0.1;
+  color-scheme: light;
+}
+
+.dark {
+  /* Dark */
+  --bg: 10 12 17;
+  --elev: 16 19 26;
+  --subtle: 22 26 34;
+  --line: 33 39 51;
+  --line-soft: 25 30 39;
+  --ink: 241 243 247;   /* 17.6:1 */
+  --muted: 163 172 188; /*  8.6:1 */
+  --faint: 123 133 152; /*  5.3:1 */
+  --accent: 147 180 245;    /*  9.4:1 */
+  --accent-hi: 187 208 251; /* 12.6:1 */
+  --warm: 224 180 137;      /* 10.3:1 */
+  --ok: 52 211 153;         /* 10.2:1 */
+  --bad: 252 165 165;       /* 10.3:1 */
+  --glow: 90 130 210;
+  --glow-warm: 200 152 96;
+  --glow-a: 0.16;
+  color-scheme: dark;
+}
+
+@layer base {
+  * {
+    border-color: rgb(var(--line));
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+
+  body {
+    margin: 0;
+    background: rgb(var(--bg));
+    color: rgb(var(--muted));
+    font-family: theme('fontFamily.sans');
+    font-size: 16px;
+    line-height: 1.65;
+    letter-spacing: -0.003em;
+    font-synthesis-weight: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  h1, h2, h3, h4 {
+    color: rgb(var(--ink));
+    font-weight: 600;
+    letter-spacing: -0.028em;
+    line-height: 1.1;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background: rgb(var(--accent) / 0.28);
+    color: rgb(var(--ink));
+  }
+
+  :focus-visible {
+    outline: 2px solid rgb(var(--accent));
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 11px; height: 11px; }
+  ::-webkit-scrollbar-track { background: rgb(var(--bg)); }
+  ::-webkit-scrollbar-thumb {
+    background: rgb(var(--line));
+    border: 3px solid rgb(var(--bg));
+    border-radius: 99px;
+  }
+  ::-webkit-scrollbar-thumb:hover { background: rgb(var(--faint)); }
+}
+
+@layer components {
+  /* Small uppercase mono label used for section eyebrows */
+  .label {
+    @apply font-mono text-2xs uppercase tracking-[0.16em] text-faint;
+  }
+
+  /* Ambient gradient wash behind the hero */
+  .ambient {
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -8%, rgb(var(--glow) / var(--glow-a)), transparent 70%),
+      radial-gradient(ellipse 55% 45% at 86% 10%, rgb(var(--glow-warm) / calc(var(--glow-a) * 0.75)), transparent 72%);
+  }
+
+  /* Faint grid, keeps large dark areas from reading as dead space */
+  .grid-lines {
+    background-image:
+      linear-gradient(to right, rgb(var(--line) / 0.5) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(var(--line) / 0.5) 1px, transparent 1px);
+    background-size: 64px 64px;
+    mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, #000 10%, transparent 75%);
+  }
+
+  .card {
+    @apply rounded-2xl border border-line bg-elev transition-colors duration-300;
+  }
+
+  .card-hover {
+    @apply hover:border-accent/50;
+  }
+
+  /* Underline that draws in on hover */
+  .link-underline {
+    @apply relative text-ink no-underline;
+  }
+  .link-underline::after {
+    content: '';
+    @apply absolute -bottom-0.5 left-0 h-px w-full origin-right scale-x-0 bg-accent transition-transform duration-300;
+  }
+  .link-underline:hover::after {
+    @apply origin-left scale-x-100;
+  }
+
+  .fade-edges {
+    mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+  }
+}
+
+@layer utilities {
+  /* Hiding is scoped to .js-reveal, which useReveal adds to <html> only
+     once it can actually observe. No JS, no observer, or reduced motion
+     => nothing is ever hidden. */
+  .js-reveal .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .js-reveal .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* An automated audit reports this as 1:1 — the element's `color` is
+     transparent and the ink comes from the clipped background. Checked by
+     hand instead: the faintest end (ink at 62%) is 5.2:1 on light and
+     7.1:1 on dark, against 3:1 for text this size. */
+  .text-gradient {
+    background: linear-gradient(160deg, rgb(var(--ink)), rgb(var(--ink) / 0.62));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
