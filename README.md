@@ -28,8 +28,7 @@ you should never need to touch a component to change what it says.
 
 - [x] `profile.links.github` — https://github.com/neeraj43
 - [ ] `profile.links` linkedin + leetcode still ship as `'#'`
-- [ ] **Push `../prompt-eval` to GitHub** — the Prompt Evaluator card links to
-      `github.com/neeraj43/prompt-eval`, which 404s until it exists
+- [x] `../prompt-eval` pushed — github.com/neeraj43/prompt-eval
 - [ ] `public/Neeraj-Wadhwani-Resume.pdf` added
 - [x] Headshot added — `public/neeraj-480.jpg` / `neeraj-960.jpg` (falls back to "NW" initials if missing)
 - [ ] Replace the scaffold entries in `src/data/projects.js` with real work
