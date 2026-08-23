@@ -24,7 +24,7 @@ export function About() {
           <div className="card p-5">
             <p className="label mb-3">Currently</p>
             <p className="text-[15px] leading-relaxed text-muted">
-              Software Engineer III at{' '}
+              Associate Vice President at{' '}
               <span className="text-ink">JPMorgan Chase</span>, working on
               agentic AI and the tooling that makes it safe to ship.
             </p>

@@ -115,6 +115,8 @@ export function Hero() {
               </a>
 
               <a
+                target="_blank"
+                rel="noreferrer"
                 href={links.resume}
                 className="inline-flex items-center gap-2 rounded-xl border border-line px-5 py-3 text-sm font-medium text-ink transition-colors hover:border-accent/50"
               >

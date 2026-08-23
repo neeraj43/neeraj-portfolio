@@ -91,6 +91,8 @@ export function Nav({ dark, onToggleTheme }) {
             </button>
 
             <a
+              target="_blank"
+              rel="noreferrer"
               href={profile.links.resume}
               className="hidden rounded-lg bg-ink px-4 py-2 text-sm font-medium text-bg transition-opacity hover:opacity-90 sm:block"
             >
@@ -133,6 +135,8 @@ export function Nav({ dark, onToggleTheme }) {
           ))}
           <li className="pt-6">
             <a
+              target="_blank"
+              rel="noreferrer"
               href={profile.links.resume}
               className="inline-block rounded-lg bg-ink px-5 py-3 font-medium text-bg"
             >

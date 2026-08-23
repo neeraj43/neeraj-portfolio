@@ -18,7 +18,7 @@ export const profile = {
     text: 'Open to Lead / Staff AI engineering roles',
   },
 
-  location: 'Indore, India',
+  location: 'Bangalore, India',
   timezone: 'IST (UTC+5:30) · overlaps EU fully, US mornings',
   email: 'neerajwadhwani43@gmail.com',
 

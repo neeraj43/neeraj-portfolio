@@ -10,7 +10,7 @@
 export const experience = [
   {
     company: 'JPMorgan Chase & Co.',
-    role: 'Software Engineer III', // TODO: confirm exact title with JPMC
+    role: 'Associate Vice President',
     period: 'Oct 2025 — Present',
     current: true,
     focus: 'Agentic AI · Developer platforms',
