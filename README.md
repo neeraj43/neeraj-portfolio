@@ -61,6 +61,14 @@ Single column with real text and no images, so applicant tracking systems can
 parse it. The phone number is deliberately omitted — the file is served from a
 public repo, and a scraped phone number is harder to undo than a missing one.
 
+Profile links render as labels (GitHub, LinkedIn, LeetCode) with the URL in the
+anchor, matching how his own resume reads. Verify the links survive a re-render —
+a label whose URL was lost is worse than a visible URL:
+
+```bash
+python3 -c "import re;d=open('public/Neeraj-Wadhwani-Resume.pdf','rb').read();print(*sorted(set(re.findall(rb'/URI\s*\(([^)]+)\)',d))),sep=chr(10))"
+```
+
 ## Images
 
 The master headshot is `assets/neeraj-original.png` (not shipped). The two
