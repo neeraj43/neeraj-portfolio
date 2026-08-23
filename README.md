@@ -29,13 +29,37 @@ you should never need to touch a component to change what it says.
 - [x] `profile.links.github` — https://github.com/neeraj43
 - [x] `profile.links` linkedin + leetcode filled in
 - [x] `../prompt-eval` pushed — github.com/neeraj43/prompt-eval
-- [ ] `public/Neeraj-Wadhwani-Resume.pdf` added
+- [x] `public/Neeraj-Wadhwani-Resume.pdf` — generated from `assets/resume.html`, see *Resume* below
 - [x] Headshot added — `public/neeraj-480.jpg` / `neeraj-960.jpg` (falls back to "NW" initials if missing)
 - [ ] Replace the scaffold entries in `src/data/projects.js` with real work
 - [ ] Fill `metric` in `src/data/experience.js`, or leave blank (blank does not render)
 - [ ] Update the canonical + `og:` URLs in `index.html` if the domain differs
 - [x] Profile URLs added to the `sameAs` array in the JSON-LD block in `index.html`
 - [ ] Regenerate `public/og.png` if the headline changes (see *Images* below)
+
+## Resume
+
+`public/Neeraj-Wadhwani-Resume.pdf` is generated, not hand-maintained. Edit
+`assets/resume.html` and re-render:
+
+```bash
+"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
+  --headless=new --no-pdf-header-footer \
+  --print-to-pdf=public/Neeraj-Wadhwani-Resume.pdf \
+  "file://$PWD/assets/resume.html"
+```
+
+It is tuned to fit exactly one A4 page — the content measures 1028px against a
+1060px budget at 9.5mm margins. Adding a bullet will silently push it to two
+pages, so check the page count after editing:
+
+```bash
+python3 -c "import re;d=open('public/Neeraj-Wadhwani-Resume.pdf','rb').read();print(len(re.findall(rb'/Type\s*/Page[^s]',d)),'pages')"
+```
+
+Single column with real text and no images, so applicant tracking systems can
+parse it. The phone number is deliberately omitted — the file is served from a
+public repo, and a scraped phone number is harder to undo than a missing one.
 
 ## Images
 

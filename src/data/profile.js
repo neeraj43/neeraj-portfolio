@@ -31,7 +31,7 @@ export const profile = {
   },
 
   about: [
-    "I spent nine years learning how software breaks in the real world — Angular and React front ends, Android apps, Java and .NET services, and the deployment plumbing underneath all of it. That range was never the plan; it was the job. But it turned out to be the best possible preparation for what I do now.",
+    "I spent nine years learning how software breaks in the real world — React, Next.js and Angular front ends, Java services behind them, and the deployment plumbing underneath all of it. That range was never the plan; it was the job. But it turned out to be the best possible preparation for what I do now.",
 
     "Because building with LLMs is not really a modelling problem. It's a systems problem wearing a new hat. Non-deterministic output, latency you can't predict, costs that scale with usage, and failure modes that look nothing like a stack trace. The engineers who handle that well are the ones who have already shipped and operated real systems.",
 

@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Neeraj Wadhwani — Resume</title>
+<style>
+  /* Single column, real text, standard headings — ATS parsers choke on
+     multi-column layouts and text baked into images. */
+  @page { size: A4; margin: 9.5mm 13mm; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "Charter", "Georgia", "Times New Roman", serif;
+    font-size: 9.25pt; line-height: 1.32; color: #16181d;
+  }
+  a { color: #1E3E7B; text-decoration: none; }
+  header { border-bottom: 1.6pt solid #1E3E7B; padding-bottom: 5pt; margin-bottom: 9pt; }
+  h1 {
+    font-size: 18.5pt; font-weight: 700; letter-spacing: -0.35pt;
+    color: #0E1219; line-height: 1.05;
+  }
+  .title { font-size: 10.6pt; color: #1E3E7B; font-weight: 700; margin-top: 2pt; }
+  .contact { font-size: 8.9pt; color: #3d434f; margin-top: 4pt; }
+  .contact span::after { content: " · "; color: #9aa0ac; }
+  .contact span:last-child::after { content: ""; }
+
+  h2 {
+    font-size: 9.4pt; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.9pt; color: #1E3E7B;
+    border-bottom: 0.6pt solid #ccd2dd;
+    padding-bottom: 2pt; margin: 7pt 0 4pt;
+  }
+  p.summary { text-align: justify; }
+
+  .role { margin-bottom: 5.5pt; }
+  .role:last-child { margin-bottom: 0; }
+  .role-head { display: flex; justify-content: space-between; align-items: baseline; gap: 8pt; }
+  .role-title { font-weight: 700; font-size: 10.2pt; color: #0E1219; }
+  .role-org { font-weight: 400; color: #3d434f; }
+  .role-when { font-size: 8.8pt; color: #5a616e; white-space: nowrap; font-style: italic; }
+  .role-focus { font-size: 8.4pt; color: #1E3E7B; margin-bottom: 2pt; }
+  ul { margin: 2pt 0 0 13pt; }
+  li { margin-bottom: 1.8pt; text-align: justify; }
+  li::marker { color: #8a91a0; }
+
+  .skills { display: grid; grid-template-columns: 82pt 1fr; gap: 3pt 8pt; }
+  .skills dt { font-weight: 700; color: #3d434f; font-size: 9.2pt; }
+  .skills dd { color: #16181d; }
+
+  .proj-name { font-weight: 700; color: #0E1219; }
+  .edu { display: flex; justify-content: space-between; align-items: baseline; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Neeraj Wadhwani</h1>
+  <div class="title">Senior Software Engineer &middot; AI &amp; Agentic Systems</div>
+  <div class="contact">
+    <span>Indore, MP, India</span>
+    <span><a href="mailto:neerajwadhwani43@gmail.com">neerajwadhwani43@gmail.com</a></span>
+    <span><a href="https://github.com/neeraj43">github.com/neeraj43</a></span>
+    <span><a href="https://www.linkedin.com/in/neeraj-wadhwani-a55085115/">linkedin.com/in/neeraj-wadhwani</a></span>
+    <span><a href="https://leetcode.com/u/Neeraj43/">leetcode.com/u/Neeraj43</a></span>
+  </div>
+</header>
+
+<h2>Summary</h2>
+<p class="summary">
+  Senior software engineer with 9+ years shipping and operating full-stack systems
+  — React, Angular, Java, Node and the deployment plumbing beneath them. Now focused
+  on agentic AI inside a regulated bank: the evaluation harnesses, guardrails and
+  tooling that make LLM-backed features safe to ship. The hard part is rarely the
+  prompt — it is proving a non-deterministic system is reliable, auditable and
+  affordable before it touches anything that matters.
+</p>
+
+<h2>Experience</h2>
+
+<div class="role">
+  <div class="role-head">
+    <div class="role-title">Software Engineer III <span class="role-org">— JPMorgan Chase &amp; Co.</span></div>
+    <div class="role-when">Oct 2025 – Present</div>
+  </div>
+  <div class="role-focus">Agentic AI &middot; Developer platforms</div>
+  <ul>
+    <li>Building agent workflows that automate engineering tasks previously done by
+      hand, with human-in-the-loop checkpoints at every step that touches customer
+      or regulated data.</li>
+    <li>Built the evaluation layer — golden datasets, regression suites and scoring —
+      so agent changes are measured before release rather than judged by demo.</li>
+    <li>Established guardrail patterns for prompt injection, PII handling and output
+      validation, adopted as a baseline by other teams.</li>
+    <li>Act as the bridge between engineers new to LLMs and the platform: reviewing
+      designs, running enablement sessions, and turning one-off experiments into
+      reusable internal components.</li>
+  </ul>
+</div>
+
+<div class="role">
+  <div class="role-head">
+    <div class="role-title">Senior Software Engineer II <span class="role-org">— Gupshup Technology Pvt Ltd, Mumbai</span></div>
+    <div class="role-when">May 2021 – Oct 2025</div>
+  </div>
+  <div class="role-focus">Conversational messaging platform at scale</div>
+  <ul>
+    <li>Designed and shipped scalable web components and features from ideation to
+      production in React, Next.js and TypeScript, improving user engagement by 25%.</li>
+    <li>Led the architectural migration from a monolith to a modular micro-frontend
+      system using Module Federation and Storybook, enabling parallel team
+      development and independent deployments.</li>
+    <li>Owned the UI and API layers end to end, integrating Java microservices over
+      REST and GraphQL, and tuned performance with lazy loading, memoisation and
+      suspense.</li>
+    <li>Enforced privacy and security practice across the surface: input validation,
+      rate limiting, JWT encryption and cookie handling — backed by automated
+      tests, CI/CD pipelines and CloudWatch monitoring.</li>
+  </ul>
+</div>
+
+<div class="role">
+  <div class="role-head">
+    <div class="role-title">UI Lead Engineer <span class="role-org">— Jungleworks, Chandigarh</span></div>
+    <div class="role-when">Feb 2017 – May 2021</div>
+  </div>
+  <div class="role-focus">Real-time logistics</div>
+  <ul>
+    <li>Led full-stack work on the Tookan dashboard for real-time logistics,
+      delivering interactive maps and live driver tracking over WebSockets.</li>
+    <li>Built reusable component libraries in React and Angular, improving
+      consistency and cutting development time by 40% across features reaching
+      5,000+ business users.</li>
+    <li>Mentored junior engineers, raised code-review standards, and enforced unit
+      and integration coverage with Jest, Jasmine and Karma.</li>
+  </ul>
+</div>
+
+<h2>Selected Project</h2>
+<div class="role">
+  <div class="role-head">
+    <div class="role-title"><span class="proj-name">Prompt Evaluator</span>
+      <span class="role-org">— open source ·
+      <a href="https://github.com/neeraj43/prompt-eval">github.com/neeraj43/prompt-eval</a></span>
+    </div>
+    <div class="role-when">2026</div>
+  </div>
+  <ul>
+    <li>Scores a prompt before a run is spent on it — five weighted rubrics by prompt
+      type, plus repo-aware advice that resolves the nouns in a prompt to real file
+      paths. The engineering problem is grade inflation: a model asked to score a
+      prompt returns 70–85% regardless of input, so anchored levels, scoring
+      dimensions before totals, and a committed calibration set hold the scale honest.</li>
+  </ul>
+</div>
+
+<h2>Technical Skills</h2>
+<dl class="skills">
+  <dt>AI &amp; LLM</dt>
+  <dd>Agentic workflows &amp; tool use, RAG, evaluation harnesses, guardrails &amp; prompt-injection defence, prompt engineering, LLM observability, OpenAI &amp; Claude APIs</dd>
+  <dt>Languages</dt>
+  <dd>TypeScript, JavaScript (ES6+), Python, Java, SQL</dd>
+  <dt>Frontend</dt>
+  <dd>React, Next.js, Angular, Web Components, Module Federation, TailwindCSS, Storybook, Jest</dd>
+  <dt>Backend &amp; platform</dt>
+  <dd>Node.js, Java microservices, REST, GraphQL, MySQL, AWS (CloudFront, S3, Lambda, CloudWatch), Docker, CI/CD</dd>
+</dl>
+
+<h2>Education</h2>
+<div class="edu">
+  <div><strong>Bachelor of Technology, Computer Science</strong> — Acropolis Institute of Technology and Research</div>
+  <div class="role-when">2017</div>
+</div>
+
+</body>
+</html>

@@ -10,8 +10,8 @@
 export const experience = [
   {
     company: 'JPMorgan Chase & Co.',
-    role: 'Software Engineer III', // TODO: confirm exact title
-    period: '2024 — Present',
+    role: 'Software Engineer III', // TODO: confirm exact title with JPMC
+    period: 'Oct 2025 — Present',
     current: true,
     focus: 'Agentic AI · Developer platforms',
     summary:
@@ -22,37 +22,39 @@ export const experience = [
       'Established guardrail patterns for prompt injection, PII handling and output validation that other teams now adopt as a baseline.',
       'Act as the bridge between engineers new to LLMs and the platform: reviewing designs, running enablement sessions, and turning one-off experiments into reusable internal components.',
     ],
-    stack: ['Python', 'LLM APIs', 'Agent frameworks', 'RAG', 'Evals', 'Angular', '.NET'],
+    stack: ['Python', 'LLM APIs', 'Agent frameworks', 'RAG', 'Evals', 'TypeScript'],
     metric: { value: '', label: '' }, // e.g. { value: '40+', label: 'engineers onboarded' }
   },
   {
     company: 'Gupshup',
-    role: 'Lead Full-Stack Developer',
-    period: '2021 — 2024',
-    focus: 'High-throughput messaging platforms',
+    role: 'Senior Software Engineer II',
+    period: '2021 — 2025',
+    focus: 'Conversational messaging at scale',
     summary:
-      'Led a team modernising high-traffic messaging infrastructure — breaking a monolith into services that could absorb conversational load at scale.',
+      'Took a monolithic messaging product to a modular micro-frontend architecture, and owned the surface from the component library down to the Java services behind it.',
     highlights: [
-      'Led the decomposition of a legacy messaging monolith into independently deployable services, sequencing the migration so production traffic was never at risk.',
-      'Replaced brittle REST surfaces with a typed GraphQL gateway, cutting the round trips clients needed and simplifying downstream integration.',
-      'Owned technical direction and code review for the team, and mentored engineers through the shift to distributed thinking.',
+      'Led the migration from a monolith to a modular micro-frontend system using Module Federation and Storybook, so teams could develop in parallel and deploy independently.',
+      'Owned the UI and API layers end to end, integrating Java microservices over REST and GraphQL, and tuned rendering with lazy loading, memoisation and suspense.',
+      'Shipped components and features from ideation to production in React, Next.js and TypeScript — one stretch of that work lifted user engagement 25%.',
+      'Enforced the security practice on that surface: input validation, rate limiting, JWT encryption and cookie handling, backed by CI/CD and CloudWatch monitoring.',
     ],
-    stack: ['Node.js', 'GraphQL', 'React', 'Docker', 'Microservices'],
+    stack: ['React', 'Next.js', 'TypeScript', 'Module Federation', 'Java', 'GraphQL', 'AWS'],
     metric: { value: '', label: '' },
   },
   {
     company: 'Jungleworks',
-    role: 'Software Engineer — Full-Stack',
+    role: 'UI Lead Engineer',
     period: '2017 — 2021',
     focus: 'Real-time logistics',
     summary:
-      'Built real-time location and dispatch systems for logistics products, plus the Android and web clients consuming them.',
+      'Led the front end of Tookan, a real-time logistics dashboard — interactive maps and live driver tracking, for products used by thousands of businesses.',
     highlights: [
-      'Built ingestion pipelines handling continuous location streams from field devices without dropping events under peak load.',
-      'Shipped Android and web clients end to end, from API design through to release.',
-      'Cut dashboard load times substantially by reworking how data was aggregated and delivered to the front end.',
+      'Led full-stack work on the Tookan dashboard, delivering interactive maps and live driver tracking over WebSockets.',
+      'Built reusable component libraries in React and Angular, cutting development time 40% across features reaching 5,000+ business users.',
+      'Mentored junior engineers, raised code-review standards, and enforced unit and integration coverage with Jest, Jasmine and Karma.',
+      'Designed backend connectors in Java and shaped the data access, storage and logging strategy.',
     ],
-    stack: ['Java', 'Android', 'Angular', 'WebSockets', 'MySQL'],
+    stack: ['React', 'Angular', 'Java', 'WebSockets', 'MySQL'],
     metric: { value: '', label: '' },
   },
 ]
