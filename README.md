@@ -24,6 +24,23 @@ you should never need to touch a component to change what it says.
 | `src/data/experience.js` | Roles and highlights |
 | `src/data/skills.js` | Toolkit groups |
 
+## Deploying
+
+Pushed to `main` → GitHub Actions builds and publishes to GitHub Pages.
+Live at **https://neeraj43.github.io**.
+
+The workflow (`.github/workflows/deploy.yml`) runs `npm run lint` before
+building, so a lint failure blocks the deploy rather than shipping past it.
+Nothing is committed to a `gh-pages` branch — the built output is uploaded as
+an artifact, so `dist/` stays ignored.
+
+**The absolute URLs in `index.html` must match wherever the site actually
+lives.** `canonical`, `og:url`, `og:image`, `twitter:image` and the JSON-LD
+`url` are all hardcoded, because Open Graph requires absolute URLs. Point them
+at a domain that doesn't resolve and the LinkedIn preview silently renders
+nothing. If you move to a custom domain, change all five and add a `CNAME` file
+to `public/`.
+
 ## Before deploying — checklist
 
 - [x] `profile.links.github` — https://github.com/neeraj43
